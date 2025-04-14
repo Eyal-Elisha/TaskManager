@@ -7,10 +7,6 @@ let tasks = [];
 
 tasksRoutes.get('/tasks', async (req, res) => {
     try {
-      if (tasks.length === 0) {
-        return res.status(200).json({ message: 'No tasks found' });
-      }
-  
       res.status(200).json(tasks);
     } catch (error) {
       console.error(error);
